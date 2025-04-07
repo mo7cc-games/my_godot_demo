@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MyGodotDemo"
-run/main_scene="uid://kyloy63grfru"
+run/main_scene="uid://jvr5acu5uunk"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://static/icon.svg"
 

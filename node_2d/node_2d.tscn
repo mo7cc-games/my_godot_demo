@@ -20,3 +20,5 @@ text = "Toggle motion"
 metadata/_edit_use_anchors_ = true
 
 [node name="first_input" parent="." instance=ExtResource("1_f5usv")]
+
+[connection signal="pressed" from="Button" to="first_input" method="_on_button_pressed"]
