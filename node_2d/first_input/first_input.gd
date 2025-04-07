@@ -19,11 +19,19 @@ var angular_speed = PI
 # 	position += velocity * delta
 
 
+func _ready():
+	var timer = get_node("Timer")
+	timer.timeout.connect(_on_timer_timeout)
+
+
 func _process(delta):
 	rotation += angular_speed * delta
 	var velocity = Vector2.UP.rotated(rotation) * speed
 	position += velocity * delta
 
 func _on_button_pressed() -> void:
-	print("Button:", is_processing())
 	set_process(not is_processing()) # 暂停帧处理
+
+
+func _on_timer_timeout():
+	visible = not visible

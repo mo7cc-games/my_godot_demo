@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://jvr5acu5uunk"]
+[gd_scene load_steps=3 format=3 uid="uid://jvr5acu5uunk"]
 
 [ext_resource type="PackedScene" uid="uid://kyloy63grfru" path="res://node_2d/first_input/first_input.tscn" id="1_f5usv"]
+[ext_resource type="Script" uid="uid://chjmuccyub0sh" path="res://node_2d/node_2d.gd" id="1_tnq68"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_tnq68")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -20,5 +22,9 @@ text = "Toggle motion"
 metadata/_edit_use_anchors_ = true
 
 [node name="first_input" parent="." instance=ExtResource("1_f5usv")]
+
+[node name="Timer" type="Timer" parent="first_input"]
+wait_time = 0.1
+autostart = true
 
 [connection signal="pressed" from="Button" to="first_input" method="_on_button_pressed"]
